@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>林宣穎｜個人名片</title>
-<meta name="description" content="林宣穎的個人名片：活潑可愛，喜歡狐狸。">
-<meta property="og:title" content="林宣穎｜個人名片">
-<meta property="og:description" content="活潑可愛，喜歡狐狸。">
+<title>林宣穎｜自我介紹</title>
+<meta name="description" content="林宣穎的國小生自我介紹：活潑可愛，喜歡狐狸。">
+<meta property="og:title" content="林宣穎｜自我介紹">
+<meta property="og:description" content="國小生自我介紹：活潑可愛，喜歡狐狸。">
 <meta property="og:image" content="assets/lin-xuan-ying.jpg">
 <style>
   * {
@@ -132,36 +132,39 @@
     padding: 52px 24px 28px;
   }
 
-  .qr-section {
+  .intro-section {
     display: grid;
     justify-items: center;
-    gap: 12px;
+    gap: 14px;
   }
 
-  .qr-box {
-    width: min(64vw, 214px);
-    padding: 12px;
-    border: 3px solid #ffffff;
-    border-radius: 24px;
-    background: #ffffff;
-    box-shadow: 0 14px 28px rgba(54, 92, 146, 0.15);
-  }
-
-  .qr-box img {
+  .intro-title {
     width: 100%;
-    display: block;
-    border-radius: 14px;
+    padding: 14px 16px;
+    border: 2px solid rgba(255, 255, 255, 0.88);
+    border-radius: 20px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 900;
+    color: #4d628d;
+    background: rgba(255, 255, 255, 0.62);
+    box-shadow: 0 12px 22px rgba(54, 92, 146, 0.12);
   }
 
-  .scan-text {
-    font-size: 14px;
+  .intro-text {
+    width: 100%;
+    padding: 16px 18px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.56);
+    font-size: 17px;
     font-weight: 800;
-    color: #4d628d;
+    line-height: 1.8;
+    color: #344066;
   }
 
   .fox {
-    width: min(48vw, 160px);
-    margin: 2px auto 6px;
+    width: min(58vw, 190px);
+    margin: 4px auto 2px;
     filter: drop-shadow(0 12px 12px rgba(116, 89, 92, 0.16));
   }
 
@@ -240,7 +243,7 @@
 </head>
 <body>
   <main class="page">
-    <article class="card" aria-label="林宣穎個人名片">
+    <article class="card" aria-label="林宣穎自我介紹">
       <section class="hero">
         <div class="photo-frame">
           <img src="assets/lin-xuan-ying.jpg" alt="林宣穎照片">
@@ -252,12 +255,9 @@
       </section>
 
       <section class="content">
-        <div class="qr-section">
-          <div class="qr-box">
-            <img src="qrcode.png" alt="QR Code">
-          </div>
-          <p class="scan-text">掃描 QR Code 認識我</p>
-
+        <div class="intro-section">
+          <div class="intro-title">我的自我介紹</div>
+          <p class="intro-text">大家好，我是林宣穎。我是一個活潑可愛的小學生，最喜歡狐狸。</p>
           <svg class="fox" viewBox="0 0 260 210" role="img" aria-label="狐狸插圖">
             <path d="M52 83C40 48 38 28 45 20c7-8 29 11 50 38h70c21-27 43-46 50-38 7 8 5 28-7 63 18 18 28 43 28 72 0 36-31 53-106 53S24 191 24 155c0-29 10-54 28-72z" fill="#f48637"/>
             <path d="M51 32c10 8 25 25 40 47L58 93C48 63 45 40 51 32zM209 32c-10 8-25 25-40 47l33 14c10-30 13-53 7-61z" fill="#d95f2f"/>
