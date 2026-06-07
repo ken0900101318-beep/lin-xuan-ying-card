@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>林宣穎｜個人名片</title>
+<meta name="description" content="林宣穎的個人名片：活潑可愛，喜歡狐狸。">
+<meta property="og:title" content="林宣穎｜個人名片">
+<meta property="og:description" content="活潑可愛，喜歡狐狸。">
+<meta property="og:image" content="assets/lin-xuan-ying.jpg">
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    min-height: 100%;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    color: #27304d;
+    background:
+      radial-gradient(circle at 16% 18%, rgba(255, 255, 255, 0.72) 0 11%, transparent 24%),
+      radial-gradient(circle at 86% 12%, rgba(255, 255, 255, 0.58) 0 9%, transparent 22%),
+      linear-gradient(135deg, #ffc2de 0%, #f7b8dc 28%, #b6dcff 68%, #8fc8ff 100%);
+    overflow-x: hidden;
+  }
+
+  body::before,
+  body::after {
+    content: "";
+    position: fixed;
+    border-radius: 999px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  body::before {
+    width: 260px;
+    height: 260px;
+    left: -86px;
+    bottom: 8vh;
+    background: rgba(255, 255, 255, 0.23);
+    box-shadow: 220px -520px 0 rgba(255, 246, 252, 0.2);
+  }
+
+  body::after {
+    width: 210px;
+    height: 210px;
+    right: -72px;
+    top: 42vh;
+    background: rgba(255, 255, 255, 0.18);
+  }
+
+  .page {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 28px 16px;
+  }
+
+  .card {
+    width: min(100%, 430px);
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.68);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 24px 60px rgba(66, 98, 152, 0.24);
+    backdrop-filter: blur(18px);
+  }
+
+  .hero {
+    position: relative;
+    padding: 22px 22px 0;
+  }
+
+  .photo-frame {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    border: 8px solid #ffffff;
+    border-radius: 24px;
+    background: #f8dbea;
+    box-shadow: 0 16px 32px rgba(67, 84, 132, 0.18);
+  }
+
+  .photo-frame img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center 34%;
+  }
+
+  .name-plate {
+    position: absolute;
+    left: 50%;
+    bottom: -24px;
+    transform: translateX(-50%);
+    min-width: 72%;
+    padding: 14px 18px 15px;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-radius: 999px;
+    text-align: center;
+    color: #ffffff;
+    background: linear-gradient(135deg, #ff7eb6, #7ab9ff);
+    box-shadow: 0 14px 26px rgba(88, 121, 172, 0.22);
+  }
+
+  .name {
+    font-size: clamp(30px, 9vw, 40px);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .subtitle {
+    margin-top: 7px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+
+  .content {
+    padding: 52px 24px 28px;
+  }
+
+  .qr-section {
+    display: grid;
+    justify-items: center;
+    gap: 12px;
+  }
+
+  .qr-box {
+    width: min(64vw, 214px);
+    padding: 12px;
+    border: 3px solid #ffffff;
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow: 0 14px 28px rgba(54, 92, 146, 0.15);
+  }
+
+  .qr-box img {
+    width: 100%;
+    display: block;
+    border-radius: 14px;
+  }
+
+  .scan-text {
+    font-size: 14px;
+    font-weight: 800;
+    color: #4d628d;
+  }
+
+  .fox {
+    width: min(48vw, 160px);
+    margin: 2px auto 6px;
+    filter: drop-shadow(0 12px 12px rgba(116, 89, 92, 0.16));
+  }
+
+  .profile {
+    display: grid;
+    gap: 12px;
+    margin-top: 18px;
+  }
+
+  .info-row {
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    align-items: center;
+    min-height: 50px;
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.86);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.62);
+  }
+
+  .label {
+    font-size: 13px;
+    font-weight: 800;
+    color: #7a86a7;
+  }
+
+  .value {
+    font-size: 17px;
+    font-weight: 900;
+    color: #26304c;
+    line-height: 1.35;
+  }
+
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .badge {
+    flex: 1 1 120px;
+    padding: 12px 14px;
+    border-radius: 999px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 900;
+    color: #ffffff;
+    background: linear-gradient(135deg, #ff8abb, #78baff);
+    box-shadow: 0 10px 18px rgba(85, 118, 172, 0.16);
+  }
+
+  @media (max-width: 380px) {
+    .page {
+      padding: 16px 10px;
+    }
+
+    .card {
+      border-radius: 22px;
+    }
+
+    .hero {
+      padding: 16px 16px 0;
+    }
+
+    .content {
+      padding: 48px 16px 22px;
+    }
+
+    .info-row {
+      grid-template-columns: 78px 1fr;
+      padding: 11px 12px;
+    }
+  }
+</style>
+</head>
+<body>
+  <main class="page">
+    <article class="card" aria-label="林宣穎個人名片">
+      <section class="hero">
+        <div class="photo-frame">
+          <img src="assets/lin-xuan-ying.jpg" alt="林宣穎照片">
+        </div>
+        <div class="name-plate">
+          <h1 class="name">林宣穎</h1>
+          <p class="subtitle">活潑可愛的小狐狸迷</p>
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="qr-section">
+          <div class="qr-box">
+            <img src="qrcode.png" alt="QR Code">
+          </div>
+          <p class="scan-text">掃描 QR Code 認識我</p>
+
+          <svg class="fox" viewBox="0 0 260 210" role="img" aria-label="狐狸插圖">
+            <path d="M52 83C40 48 38 28 45 20c7-8 29 11 50 38h70c21-27 43-46 50-38 7 8 5 28-7 63 18 18 28 43 28 72 0 36-31 53-106 53S24 191 24 155c0-29 10-54 28-72z" fill="#f48637"/>
+            <path d="M51 32c10 8 25 25 40 47L58 93C48 63 45 40 51 32zM209 32c-10 8-25 25-40 47l33 14c10-30 13-53 7-61z" fill="#d95f2f"/>
+            <path d="M79 114c20-22 40-33 51-33s31 11 51 33c8 9 14 23 14 38 0 32-25 47-65 47s-65-15-65-47c0-15 6-29 14-38z" fill="#fff6ea"/>
+            <path d="M99 139c0 8-6 14-14 14s-14-6-14-14 6-14 14-14 14 6 14 14zM231 139c0 8-6 14-14 14s-14-6-14-14 6-14 14-14 14 6 14 14z" fill="#2f3147"/>
+            <path d="M116 153c7-6 21-6 28 0-3 9-6 13-14 13s-11-4-14-13z" fill="#3a2731"/>
+            <path d="M130 164v11M130 175c-8 9-21 8-27 0M130 175c8 9 21 8 27 0" fill="none" stroke="#3a2731" stroke-width="5" stroke-linecap="round"/>
+            <path d="M44 158c-16 5-25 13-29 25 23-4 38-12 48-25H44zM216 158c16 5 25 13 29 25-23-4-38-12-48-25h19z" fill="#ffffff" opacity=".9"/>
+            <path d="M84 45l-26 49 39-17zM176 45l26 49-39-17z" fill="#fff6ea"/>
+          </svg>
+        </div>
+
+        <div class="profile">
+          <div class="info-row">
+            <div class="label">生日</div>
+            <div class="value">2017 / 2 / 10</div>
+          </div>
+          <div class="info-row">
+            <div class="label">個性</div>
+            <div class="value">活潑可愛</div>
+          </div>
+          <div class="info-row">
+            <div class="label">喜歡</div>
+            <div class="value">狐狸</div>
+          </div>
+        </div>
+
+        <div class="badges">
+          <div class="badge">可愛</div>
+          <div class="badge">活潑</div>
+          <div class="badge">狐狸控</div>
+        </div>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
